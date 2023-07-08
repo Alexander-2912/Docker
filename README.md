@@ -23,6 +23,7 @@ Melakukan copy data. Projek ini melakukan copy data dari './app' sehingga 'COPY 
 Menginstall requirements. Projek ini akan menginstall requirements yang terdaftar dalam 'requirements.txt'.
 
 ![image](https://github.com/Alexander-2912/Docker/assets/118685091/70943b3e-edc0-4334-a309-d7ddf0ffc6a1)
+
 ![image](https://github.com/Alexander-2912/Docker/assets/118685091/787a0988-445a-4ec6-b1e3-b699108d6e5d)
 
 Berikut adalah penjelasan code pada gambar diatas: 
