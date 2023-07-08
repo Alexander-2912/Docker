@@ -61,3 +61,12 @@ Membuat container.
 docker create -p 5000:5000 --name flask-container flask:0.0.6
 ```
 Command diatas digunakan untuk membuat sebuah container dengan nama flask-container menggunakan gambar Docker yang telah dibangun sebelumnya dengan tag flask:0.0.6. Opsi -p 5000:5000 mengarahkan port 5000 di host ke port 5000 di dalam container, sehingga aplikasi Flask yang berjalan di dalam container dapat diakses melalui port 5000 pada host.
+
+## Setup Postgresql Images
+### Langkah Pertama
+Mengambil (Pull) images. Image yang akan digunakan akan dipilih dan diambil dari registry Docker Hub. Projek ini menggunakan image versi 3.10.12-bullseye
+
+![image](https://github.com/Alexander-2912/Docker/assets/118685091/c08db287-1ca5-4bdc-b881-9a744b2b5c23)
+
+### Langkah Kedua
+Membuat container. 
