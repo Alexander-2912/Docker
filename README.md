@@ -55,8 +55,6 @@ docker build -t flask:0.0.6 .
 ```
 Command diatas digunakan untuk membangun (build) sebuah gambar Docker dengan nama flask:0.0.6. Opsi -t digunakan untuk memberikan tag pada gambar yang dibangun sehingga dapat diidentifikasi dan digunakan saat membuat container. Titik (.) pada akhir perintah menunjukkan bahwa Dockerfile yang digunakan untuk membangun gambar berada dalam direktori saat ini.
 
-![image](https://github.com/Alexander-2912/Docker/assets/118685091/4e631767-d22d-4578-a11f-983fa3172955)
-
 ![image](https://github.com/Alexander-2912/Docker/assets/118685091/2c3f580e-392b-47fc-838e-28d823461798)
 
 ## Langkah ketujuh
