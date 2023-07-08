@@ -47,3 +47,17 @@ Pada baris kedua, 'if __name__ == "__main__":' adalah kondisi yang mengecek apak
 Pada baris ketiga, 'app = create_app()' memanggil fungsi create_app() untuk membuat objek Flask dan menyimpannya dalam variabel app. Fungsi create_app() biasanya berisi konfigurasi aplikasi Flask, seperti mengatur rute, menginisialisasi ekstensi, dan pengaturan lainnya.
 
 Pada baris keempat, 'app.run(host='0.0.0.0')' memulai server Flask dan menjalankan aplikasi dengan mengikatnya ke host '0.0.0.0'. Dengan pengaturan host ini, aplikasi Flask akan dapat diakses dari semua alamat IP yang terhubung ke container.
+
+## Langkah Keenam
+Membangun image. 
+```
+docker build -t flask:0.0.6 .
+```
+Command diatas digunakan untuk membangun (build) sebuah gambar Docker dengan nama flask:0.0.6. Opsi -t digunakan untuk memberikan tag pada gambar yang dibangun sehingga dapat diidentifikasi dan digunakan saat membuat container. Titik (.) pada akhir perintah menunjukkan bahwa Dockerfile yang digunakan untuk membangun gambar berada dalam direktori saat ini.
+
+## Langkah ketuju
+Membuat container.
+```
+docker create -p 5000:5000 --name flask-container flask:0.0.6
+```
+Command diatas digunakan untuk membuat sebuah container dengan nama flask-container menggunakan gambar Docker yang telah dibangun sebelumnya dengan tag flask:0.0.6. Opsi -p 5000:5000 mengarahkan port 5000 di host ke port 5000 di dalam container, sehingga aplikasi Flask yang berjalan di dalam container dapat diakses melalui port 5000 pada host.
