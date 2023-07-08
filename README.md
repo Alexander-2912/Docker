@@ -32,4 +32,18 @@ Berikut adalah penjelasan code pada gambar diatas:
 3. '-r requirements.txt' memberikan argumen kepada pip untuk menginstal semua dependensi yang terdaftar dalam file requirements.txt. -r menunjukkan bahwa dependensi diambil dari file requirements.
 
 ### Langkah Kelima
-Menyiapkan Command. 
+Menyiapkan Command. CMD ["python", "run.py"] adalah perintah default dalam Dockerfile yang akan dijalankan saat container Docker berjalan. Perintah ini akan menjalankan skrip run.py menggunakan interpreter Python di dalam container.
+
+![image](https://github.com/Alexander-2912/Docker/assets/118685091/42998db8-e39c-40a9-b510-821aeb4bac00)
+
+Skrip run.py kemudian akan menjalankan aplikasi Flask dengan mengatur host menjadi '0.0.0.0' agar dapat diakses secara eksternal.
+
+![image](https://github.com/Alexander-2912/Docker/assets/118685091/109fe350-5786-4743-9396-8cc405cdd393)
+
+Pada baris pertama, 'from app import create_app' mengimport fungsi create_app dari modul app. Fungsi ini bertanggung jawab untuk membuat dan mengkonfigurasi objek Flask yang mewakili aplikasi.
+
+Pada baris kedua, 'if __name__ == "__main__":' adalah kondisi yang mengecek apakah skrip ini dijalankan langsung sebagai program utama. Ini berarti kode di dalam blok kondisi ini hanya akan dieksekusi jika skrip ini dijalankan secara langsung, bukan diimpor oleh skrip lain.
+
+Pada baris ketiga, 'app = create_app()' memanggil fungsi create_app() untuk membuat objek Flask dan menyimpannya dalam variabel app. Fungsi create_app() biasanya berisi konfigurasi aplikasi Flask, seperti mengatur rute, menginisialisasi ekstensi, dan pengaturan lainnya.
+
+Pada baris keempat, 'app.run(host='0.0.0.0')' memulai server Flask dan menjalankan aplikasi dengan mengikatnya ke host '0.0.0.0'. Dengan pengaturan host ini, aplikasi Flask akan dapat diakses dari semua alamat IP yang terhubung ke container.
