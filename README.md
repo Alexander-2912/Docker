@@ -69,4 +69,14 @@ Mengambil (Pull) images. Image yang akan digunakan akan dipilih dan diambil dari
 ![image](https://github.com/Alexander-2912/Docker/assets/118685091/c08db287-1ca5-4bdc-b881-9a744b2b5c23)
 
 ### Langkah Kedua
-Membuat container. 
+Membuat container. Berikut command yang digunakan untuk membuat container:
+```
+docker run --name postgres-container -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=postgres -p 5432:5432 -d postgres:12
+```
+Berikut adalah penjelasan dari masing-masing opsi dan argumen yang digunakan dalam perintah ini:
+1. --name postgres-container memberikan nama postgres-container kepada container yang akan dibuat.
+2. -e POSTGRES_PASSWORD=postgres mengatur variabel lingkungan POSTGRES_PASSWORD dengan nilai postgres, yang merupakan kata sandi untuk pengguna PostgreSQL.
+3. -e POSTGRES_USER=postgres mengatur variabel lingkungan POSTGRES_USER dengan nilai postgres, yang merupakan nama pengguna (user) untuk PostgreSQL.
+4. -e POSTGRES_DB=postgres mengatur variabel lingkungan POSTGRES_DB dengan nilai postgres, yang merupakan nama database yang akan dibuat dalam PostgreSQL.
+5. -p 5432:5432 mengarahkan port tujuan 5432 pada host ke port tujuan 5432 di dalam container. Port ini adalah port default yang digunakan oleh PostgreSQL untuk koneksi.
+6. -d menjalankan container dalam mode detasemen (background).
