@@ -73,7 +73,7 @@ Mengecek apakah flask sudah berjalan. Hal ini bisa dilakukan dengan menjalankan 
 
 ## Setup Postgresql Images
 ### Langkah Pertama
-Mengambil (Pull) images. Image yang akan digunakan akan dipilih dan diambil dari registry Docker Hub. Projek ini menggunakan image versi 3.10.12-bullseye
+Mengambil (Pull) images. Image yang akan digunakan akan dipilih dan diambil dari registry Docker Hub. Projek ini menggunakan image versi 12
 
 ![image](https://github.com/Alexander-2912/Docker/assets/118685091/c08db287-1ca5-4bdc-b881-9a744b2b5c23)
 
