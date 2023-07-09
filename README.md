@@ -48,7 +48,7 @@ Pada baris ketiga, 'app = create_app()' memanggil fungsi create_app() untuk memb
 
 Pada baris keempat, 'app.run(host='0.0.0.0')' memulai server Flask dan menjalankan aplikasi dengan mengikatnya ke host '0.0.0.0'. Dengan pengaturan host ini, aplikasi Flask akan dapat diakses dari semua alamat IP yang terhubung ke container.
 
-## Langkah Keenam
+### Langkah Keenam
 Membangun image. 
 ```
 docker build -t flask:0.0.6 .
@@ -57,7 +57,7 @@ Command diatas digunakan untuk membangun (build) sebuah gambar Docker dengan nam
 
 ![image](https://github.com/Alexander-2912/Docker/assets/118685091/2c3f580e-392b-47fc-838e-28d823461798)
 
-## Langkah Ketujuh
+### Langkah Ketujuh
 Membuat container.
 ```
 docker create -p 5000:5000 --name flask-container flask:0.0.6
@@ -66,7 +66,7 @@ Command diatas digunakan untuk membuat sebuah container dengan nama flask-contai
 
 ![image](https://github.com/Alexander-2912/Docker/assets/118685091/2a9cd4e9-8d65-4fa2-9c8a-97df2892f2e7)
 
-## Langkah Kedelapan
+### Langkah Kedelapan
 Mengecek apakah flask sudah berjalan. Hal ini bisa dilakukan dengan menjalankan localhost:5000 pada browser, apabila website terbuka tanpa error, maka flask sudah berhasil dijalankan.
 
 ![image](https://github.com/Alexander-2912/Docker/assets/118685091/a9c182c9-15fb-4045-86ab-98526c8f7dad)
