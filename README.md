@@ -141,28 +141,28 @@ Menunjukkan versi format konfigurasi yang digunakan dalam file Docker Compose in
 2. Service postgres:
 Merupakan service yang menggunakan image postgres:12. Beberapa konfigurasi yang diberikan untuk layanan ini adalah:
 
-2.1. container_name: Nama kontainer yang akan dijalankan untuk layanan ini.
+    2.1. container_name: Nama kontainer yang akan dijalankan untuk layanan ini.
   
-2.2. restart: always: Layanan akan selalu dijalankan ulang jika terhenti atau pada saat restart Docker.
+    2.2. restart: always: Layanan akan selalu dijalankan ulang jika terhenti atau pada saat restart Docker.
   
-2.3. ports: Mengaitkan port host 5432 dengan port kontainer 5432, sehingga PostgreSQL dapat diakses melalui localhost:5432.
+    2.3. ports: Mengaitkan port host 5432 dengan port kontainer 5432, sehingga PostgreSQL dapat diakses melalui localhost:5432.
   
-2.4. environment: Menentukan variabel lingkungan yang dibutuhkan oleh kontainer PostgreSQL, seperti username (POSTGRES_USER), password   (POSTGRES_PASSWORD), dan nama database (POSTGRES_DB).
+    2.4. environment: Menentukan variabel lingkungan yang dibutuhkan oleh kontainer PostgreSQL, seperti username (POSTGRES_USER), password   (POSTGRES_PASSWORD), dan nama database (POSTGRES_DB).
   
-2.5 volumes: Mengaitkan volume postgres-data dengan direktori /var/lib/postgresql/data dalam kontainer, sehingga data PostgreSQL akan    tetap persisten bahkan setelah kontainer dihapus.
+    2.5 volumes: Mengaitkan volume postgres-data dengan direktori /var/lib/postgresql/data dalam kontainer, sehingga data PostgreSQL akan    tetap persisten bahkan setelah kontainer dihapus.
   
 3. Service flask-app:
 Merupakan service yang menggunakan image flask:0.0.6. Konfigurasi yang diberikan untuk layanan ini adalah:
 
-3.1. container_name: Nama kontainer yang akan dijalankan untuk layanan ini.
+    3.1. container_name: Nama kontainer yang akan dijalankan untuk layanan ini.
   
-3.2. build: Mendefinisikan konteks build dan Dockerfile yang akan digunakan untuk membangun image kontainer ini.
+    3.2. build: Mendefinisikan konteks build dan Dockerfile yang akan digunakan untuk membangun image kontainer ini.
   
-3.3. restart: always: Layanan akan selalu dijalankan ulang jika terhenti atau pada saat restart Docker.
+    3.3. restart: always: Layanan akan selalu dijalankan ulang jika terhenti atau pada saat restart Docker.
   
-3.4. ports: Mengaitkan port host 5000 dengan port kontainer 5000, sehingga aplikasi Flask yang berjalan dalam kontainer dapat diakses    melalui localhost:5000.
+    3.4. ports: Mengaitkan port host 5000 dengan port kontainer 5000, sehingga aplikasi Flask yang berjalan dalam kontainer dapat diakses    melalui localhost:5000.
   
-3.5 depends_on: Menentukan bahwa layanan ini tergantung pada layanan postgres, sehingga layanan postgres akan dijalankan terlebih        dahulu sebelum layanan ini dimulai.
+    3.5 depends_on: Menentukan bahwa layanan ini tergantung pada layanan postgres, sehingga layanan postgres akan dijalankan terlebih        dahulu sebelum layanan ini dimulai.
   
 4. Bagian volumes:
 Mendefinisikan volume Docker postgres-data, yang akan digunakan untuk menyimpan data PostgreSQL. Dalam konfigurasi ini, volume tersebut akan secara otomatis dikelola oleh Docker.
