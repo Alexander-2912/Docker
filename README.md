@@ -166,3 +166,15 @@ Merupakan service yang menggunakan image flask:0.0.6. Konfigurasi yang diberikan
   
 4. Bagian volumes:
 Mendefinisikan volume Docker postgres-data, yang akan digunakan untuk menyimpan data PostgreSQL. Dalam konfigurasi ini, volume tersebut akan secara otomatis dikelola oleh Docker.
+
+Setelah membuat konfigurasi terhadap docker compose, maka selanjutnya docker compose akan dibuild dengan command 'docker compose up -d' pada terminal. Apabila sudah selesai, maka akan muncul docker compose pada docker desktop, seperti pada gambar dibawah:
+
+![image](https://github.com/Alexander-2912/Docker/assets/118685091/90c604be-ca29-4f5f-a1c0-e2cd4103726a)
+
+Kemudian, bisa di cek lagi koneksi database dan flasknya seperti yang dilakukan sebelumnya
+
+![image](https://github.com/Alexander-2912/Docker/assets/118685091/4897e8f5-1435-4e48-af20-28d65025800b)
+
+![image](https://github.com/Alexander-2912/Docker/assets/118685091/345f20e3-2c6d-42df-8f0f-2ea74f10087b)
+
+Apabila tidak ada error, maka docker compose sudah berhasil dibuat.
