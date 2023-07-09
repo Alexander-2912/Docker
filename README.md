@@ -57,7 +57,7 @@ Command diatas digunakan untuk membangun (build) sebuah gambar Docker dengan nam
 
 ![image](https://github.com/Alexander-2912/Docker/assets/118685091/2c3f580e-392b-47fc-838e-28d823461798)
 
-## Langkah ketujuh
+## Langkah Ketujuh
 Membuat container.
 ```
 docker create -p 5000:5000 --name flask-container flask:0.0.6
@@ -65,6 +65,11 @@ docker create -p 5000:5000 --name flask-container flask:0.0.6
 Command diatas digunakan untuk membuat sebuah container dengan nama flask-container menggunakan gambar Docker yang telah dibangun sebelumnya dengan tag flask:0.0.6. Opsi -p 5000:5000 mengarahkan port 5000 di host ke port 5000 di dalam container, sehingga aplikasi Flask yang berjalan di dalam container dapat diakses melalui port 5000 pada host.
 
 ![image](https://github.com/Alexander-2912/Docker/assets/118685091/2a9cd4e9-8d65-4fa2-9c8a-97df2892f2e7)
+
+## Langkah Kedelapan
+Mengecek apakah flask sudah berjalan. Hal ini bisa dilakukan dengan menjalankan localhost:5000 pada browser, apabila website terbuka tanpa error, maka flask sudah berhasil dijalankan.
+
+![image](https://github.com/Alexander-2912/Docker/assets/118685091/a9c182c9-15fb-4045-86ab-98526c8f7dad)
 
 ## Setup Postgresql Images
 ### Langkah Pertama
@@ -88,3 +93,8 @@ Berikut adalah penjelasan dari masing-masing opsi dan argumen yang digunakan dal
 6. -d menjalankan container dalam mode detasemen (background).
 
 ![image](https://github.com/Alexander-2912/Docker/assets/118685091/48a5f234-64b3-4dee-93da-026519a9ef92)
+
+### Langkah Ketiga
+Mengecek apakah postgresql sudah berjalan. Hal ini bisa dilakukan dengan melakukan koneksi ke postgresql melalui DBeaver. Masukkan database, username, dan password sesuai yang dibuat sebelumnya. 
+
+![image](https://github.com/Alexander-2912/Docker/assets/118685091/b095f653-4c59-4b63-acfd-f221b1b2858c)
